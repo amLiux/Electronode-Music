@@ -24,7 +24,7 @@ And load the whole query like this:
 ```javascript 
 youtubeWin.loadURL(`https://www.youtube.com/results?search_query=${youtubeQuery}`);
 ```
-I preload a script on that ```youtubeWin``` so it picks the first <a> HTML tag on which his href attribute contains his **_YouTube video id_**. 
+I preload a script on that ```youtubeWin``` so it picks the first ```<a>``` HTML tag on which his href attribute contains his **_YouTube video id_**. 
 
 And why is this important? This is our main piece to consume the [Youtube To Mp3 Download](https://rapidapi.com/CoolGuruji/api/youtube-to-mp3-download) API. This is a little example of the request.
 
