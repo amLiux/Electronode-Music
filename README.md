@@ -17,7 +17,7 @@
 ## How it works? 
 The main process renders ```mainWindow``` and loads the first HBS file. There we have a two input form that helps us to create the **_YouTube Query_**. 
 ```javascript
-let youtubeQuery = "input1 + input 2"; 
+let youtubeQuery = "input1 + input2"; 
 ```
 then we load this into a [**_Browser Window_**](https://electronjs.org/docs/api/browser-window). 
 and load the whole query like this:
