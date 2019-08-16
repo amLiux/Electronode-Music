@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/v4-shims.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script> require('../js/ipcRendererFunctions.js')</script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+    <header class="navbar-brand" href="#">
+        Electronode Music 
+        <i class="fas fa-music mr-2"></i>
+        <span class="font-italic small">by {{nombre}}</span>
+    </header>
+    <span class="font-italic small navbar-brand"> <i class="fas fa-mobile-alt"></i> Your device is connected!</span>
+    </nav>
+    <!--Navbar-->
+
+    <!--Jumbotron-->
+    <div class="jumbotron">
+        <h1 class="display-6" style="margin-top: -2rem">Download a song!</h1>
+        <p class="lead">Type the name of the <kbd>song</kbd> and the <kbd>artist</kbd> below then click add.</p>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="songInput" aria-describedby="emailHelp" placeholder="Song goes in here...">
+                <small id="songHelp" class="form-text text-muted">Try to be acurrate with the name of the song.</small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="artistInput" placeholder="Artist goes in here...">
+            </div>
+            <button type="button" id="sendSongIpc" class="btn btn-outline-secondary">Add!<i class="fas fa-arrow-down ml-2"></i></button>
+        </form>
+        <hr class="my-4">
+        <!--List of songs-->
+        <div class="card">
+            <div class="card-header font-weight-bold">Download Queue</div>    
+            <div class="card-body">
+                <blockquote id="fatherDiv" class="blockquote">
+                    {{#if songs}}
+                        <ul id="songsQueue" class="list-group list-group-flush mb-4">
+                            {{#each songs}}
+                                <li class="list-group-item font-weight-light font-italic">{{name}}</li>
+                            {{/each}}
+                        </ul>
+                        <footer class="blockquote-footer">Songs that are already downloaded are on <cite class="text-success" title="Source Title">green color.</cite></footer>
+                    {{else}}
+                        <p id="noSongsMsg">It seems that you do not have songs on the queue.</p>
+                        <footer class="blockquote-footer">Songs that are already downloaded are on <cite class="text-success" title="Source Title">green color.</cite></footer>
+                    {{/if}}
+                </blockquote>
+            </div>
+        </div>
+        <!--End of list-->
+    </div>
+    <!--End of Jumbotron-->
+
+    <!-- Footer -->
+    <footer id="myFooter">
+        <div class="container">
+            <ul>
+                <li><a href="#">Github Docs</a></li>
+                <li><a href="#">Contact me</a></li>
+            </ul>
+        <p class="footer-copyright">© 2019 Marcelo Bolaños</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://github.com/Marceliux" class="social-icons"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
+        </div>
+    </footer>
+    <!--End of Footer-->
+</body>
+
+</html>

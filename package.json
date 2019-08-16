@@ -1,0 +1,40 @@
+{
+  "name": "electronode-music",
+  "version": "1.0.0",
+  "description": "Desktop Electron + HBS app to download songs into a specific directory locally.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Electron",
+    "HBS",
+    "Songs",
+    "Download"
+  ],
+  "author": "Marcelo B.A.",
+  "license": "ISC",
+  "devDependencies": {
+    "@octokit/rest": "^16.3.2",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^6.0.0",
+    "check-for-leaks": "^1.2.1",
+    "devtron": "^1.3.0",
+    "electron-packager": "^12.1.0",
+    "electron-winstaller": "^2.2.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.0.2",
+    "request": "^2.70.0",
+    "rimraf": "^2.5.2",
+    "signcode": "^0.5.0",
+    "spectron": "^5.0.0",
+    "standard": "^8.2.0"
+  },
+  "dependencies": {
+    "electron": "^5.0.1",
+    "electron-handlebars": "^2.0.0",
+    "highlight.js": "^9.3.0",
+    "open": "^6.4.0"
+  }
+}
