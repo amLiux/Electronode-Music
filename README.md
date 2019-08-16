@@ -20,7 +20,7 @@ The main process renders ```mainWindow``` and loads the first HBS file. There we
 let youtubeQuery = "input1 + input2"; 
 ```
 then we load this into a [**_Browser Window_**](https://electronjs.org/docs/api/browser-window). 
-and load the whole query like this:
+And load the whole query like this:
 ```javascript 
 youtubeWin.loadURL(`https://www.youtube.com/results?search_query=${youtubeQuery}`);
 ```
